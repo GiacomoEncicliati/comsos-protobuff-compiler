@@ -70,10 +70,6 @@ def rename_any_proto_imports(directory):
                     for line in lines:
                         file.write(re.sub(r'^import "google/protobuf/any.proto";\n', 'import "google/protobuf/cosmos_any.proto";\n', line))
 
-
-
-
-
 #rename_any_proto_imports(package_name)
 remove_all_compiled_python_files(package_name)
 walk_through_project_and_compile_proto(package_name)
